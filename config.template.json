@@ -1,0 +1,25 @@
+{
+  "TELEGRAM_BOT_TOKEN": "",
+  "BOT_NAME": "randopicbot",
+  "DEFAULT_LOCALE": "en",
+  "RATE_LIMITER": {
+    "message": 1
+  },
+  "ALLOWED_UPDATES": ["message"],
+  "BULL_OPTIONS": {
+    "defaultJobOptions": {
+      "removeOnComplete": true,
+      "attempts": 2
+    },
+    "limiter": {
+      "duration": 1000,
+      "max": 30
+    }
+  },
+  "BASE_APIS": {
+    "DOG": "https://random.dog/woof.json",
+    "CAT": "https://aws.random.cat/meow",
+    "FOX": "https://randomfox.ca/floof/",
+    "SHIBE": "http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true"
+  }
+}
