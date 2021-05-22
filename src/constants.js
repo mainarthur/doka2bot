@@ -7,6 +7,7 @@ const EMPTY_STRING = ''
 const JSON_EXT = '.json'
 const GIF_EXT = '.gif'
 const DECIMAL_RADIX = 10
+const MAX_INLINE_RESULTS = 50
 
 /**
  * @type {Object.<string, import('node-telegram-bot-api').ChatAction>}
@@ -27,6 +28,7 @@ module.exports = Object.freeze({
   STRING_START_INDEX,
   BOT_COMMAND_TYPE,
   AT_SIGN,
+  MAX_INLINE_RESULTS,
   SPACE,
   NOT_FOUND_INDEX,
   EMPTY_STRING,

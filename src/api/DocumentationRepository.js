@@ -42,7 +42,21 @@ class DocumentationRepository {
     }
   }
 
-  static search() {}
+  static get documentations() {
+    return this._documentations
+  }
+
+  /**
+   * @param {String} searchQuery
+   * @returns {Array<import('./Documentation')>}
+   */
+  static search(searchQuery) {
+    if (!searchQuery) return this._documentations
+
+    return this._documentations.filter((doc) =>
+      doc.toString().toLowerCase().includes(searchQuery.toLowerCase()),
+    )
+  }
 }
 
 module.exports = DocumentationRepository

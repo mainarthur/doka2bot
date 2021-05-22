@@ -1,5 +1,6 @@
 const crypto = require('crypto')
 const { HTML } = require('telegram-escape')
+const { ParseMode } = require('../constants')
 const t18g = require('../locales')
 
 class DocumentationArticleAdapter {
@@ -18,14 +19,17 @@ class DocumentationArticleAdapter {
     this.title = name
     this.description = description
     this.input_message_content = {
-      message_text: HTML`<b>${name}</b>\n\n${description}`,
+      message_text: HTML`<b>${name}</b>
+
+${description}`,
+      parse_mode: ParseMode.HTML,
     }
     this.thumb_url = icon
     this.reply_markup = {
       inline_keyboard: [
         [
           {
-            text: t18g(locale)`open`,
+            text: searchQuery ? t18g(locale)`open_search` : t18g(locale)`open`,
             url: searchQuery ? documentation.search(searchQuery) : link,
           },
         ],
