@@ -10,7 +10,6 @@ void (async () => {
   await DocumentationRepository.load(
     path.join(__dirname, './src/documentations'),
   )
-  logger.log(DocumentationRepository)
   for (const updateType of ALLOWED_UPDATES) {
     bot.on(updateType, updateHandler(updateType))
   }
