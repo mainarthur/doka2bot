@@ -29,8 +29,13 @@ class DocumentationRepository {
         )
 
         const json = JSON.parse(src)
-
-        this._documentations.push(new Documentation(json))
+        if (Array.isArray(json)) {
+          json.forEach((doc) =>
+            this._documentations.push(new Documentation(doc)),
+          )
+        } else {
+          this._documentations.push(new Documentation(json))
+        }
       } catch (err) {
         logger.err(err)
       }
