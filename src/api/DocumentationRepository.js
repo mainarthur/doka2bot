@@ -5,6 +5,7 @@ const Documentation = require('./Documentation')
 
 const logger = require('../logger')
 const { JSON_EXT } = require('../constants')
+const getWordsOccurrencesCount = require('../util/getWordsOccurrencesCount')
 
 class DocumentationRepository {
   /**
@@ -53,8 +54,10 @@ class DocumentationRepository {
   static search(searchQuery) {
     if (!searchQuery) return this._documentations
 
-    return this._documentations.filter((doc) =>
-      doc.toString().toLowerCase().includes(searchQuery.toLowerCase()),
+    return this._documentations.sort(
+      (docA, docB) =>
+        getWordsOccurrencesCount(docB.toString(), searchQuery) -
+        getWordsOccurrencesCount(docA.toString(), searchQuery),
     )
   }
 }

@@ -33,7 +33,7 @@ class Documentation {
   }
 
   toString() {
-    return `${this.name} ${this.description} ${this.link} ${this.keywords}`
+    return `${this.name} ${this.description} ${this.keywords}`
   }
 }
 
