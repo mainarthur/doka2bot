@@ -5,8 +5,9 @@ class Documentation {
    * @param {String} options.description
    * @param {String} options.link
    * @param {String} [options.searchLink]
+   * @param {String} [options.icon]
    */
-  constructor({ name, description, link, searchLink }) {
+  constructor({ name, description, link, searchLink, icon }) {
     if (!name) throw new Error('"name" field is required')
     if (!description) throw new Error('"description" field is required')
     if (!link) throw new Error('"link" field is required')
@@ -14,6 +15,7 @@ class Documentation {
     this.description = description
     this.link = link
     this.searchLink = searchLink
+    this.icon = icon
   }
 
   /**
