@@ -1,7 +1,16 @@
-{
-  "name": "mongodb",
-  "icon": "https://telegra.ph/file/537104aa80924177f7c8a.png",
-  "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas",
-  "link": "https://docs.mongodb.com/",
-  "searchLink": "https://docs.mongodb.com/search/?q="
-}
+[
+  {
+    "name": "mongodb",
+    "icon": "https://telegra.ph/file/537104aa80924177f7c8a.png",
+    "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas",
+    "link": "https://docs.mongodb.com/",
+    "searchLink": "https://docs.mongodb.com/search/?q="
+  },
+  {
+    "name": "mongoose",
+    "icon": "https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png",
+    "description": "elegant mongodb object modeling for node.js",
+    "link": "https://mongoosejs.com/docs/guide.html",
+    "searchLink": "https://mongoosejs.com/docs/search.html?q="
+  }
+]
