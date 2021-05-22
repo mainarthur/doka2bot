@@ -2,6 +2,10 @@
 
 [Telegram Bot](https://t.me/Doka2Bot) that sends random pictures!
 
+# How to submit documentation
+
+You can contact me on Telegram: [@MasterArthur](https://t.me/MasterArthur) or fork and PR with new documentation.json file in src/documentations directory
+
 # Requirements
 
 1. [Node.js](https://nodejs.org/en/download/) (tested v16.0.0)
@@ -34,7 +38,3 @@ and start with this command:
 ```bash
 npm start
 ```
-
-# How to submit documentation
-
-You can contact me on Telegram: [@MasterArthur](https://t.me/MasterArthur) or fork and PR with new documentation.json file in src/documentations directory
