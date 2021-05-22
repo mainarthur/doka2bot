@@ -1,5 +1,6 @@
 {
-  "start": "",
+  "start": "Hi, I'm documentation search bot\n\nYou can add missing documentation by creating PR in <a href=\"https://github.com/mainarthur/doka2bot\">github</a> or by writing to <a href=\"https://t.me/MasterArthur\">me</a>",
+  "start_search": "Start searching",
   "open": "Open",
   "open_search": "Open Search Page"
 }

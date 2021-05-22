@@ -1,4 +1,6 @@
 {
-  "start": "",
-  "open": "Открыть"
+  "start": "Привет! Я бот для поиска документации\n\nВы можете добавить недостающую документацию создав PR в <a href=\"https://github.com/mainarthur/doka2bot\">github</a> или написав <a href=\"https://t.me/MasterArthur\">мне</a>",
+  "start_search": "Начать Поиск",
+  "open": "Открыть",
+  "open_search": "Открыть Страницу Поиска"
 }
