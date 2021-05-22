@@ -20,7 +20,7 @@
   "dependencies": {
     "bull": "^3.22.5",
     "node-telegram-bot-api": "^0.53.0",
-    "telegram-escape": "^1.0.8"
+    "telegram-escape": "^1.0.9"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.3",
