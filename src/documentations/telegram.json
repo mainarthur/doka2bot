@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "name": "node-telegram-bot-api",
+    "description": "Node.js module to interact with official Telegram Bot API.",
+    "link": "https://github.com/yagop/node-telegram-bot-api/blob/release/doc/api.md"
+  },
+  {
+    "name": "Telegram Bot API",
+    "description": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+    "link": "https://core.telegram.org/bots/api"
+  },
+  {
+    "name": "telebot",
+    "description": "A simple, but extensible Python implementation for the Telegram Bot API.",
+    "link": "https://github.com/eternnoir/pyTelegramBotAPI#general-api-documentation"
+  },
+  {
+    "name": "aiogram",
+    "icon": "https://docs.aiogram.dev/en/latest/_static/logo.png",
+    "description": "aiogram is a pretty simple and fully asynchronous framework for Telegram Bot API written in Python 3.7 with asyncio and aiohttp. It helps you to make your bots faster and simpler.",
+    "link": "https://docs.aiogram.dev/en/latest/",
+    "searchLink": "https://docs.aiogram.dev/en/latest/search.html?check_keywords=yes&area=default&q="
+  }
+]
