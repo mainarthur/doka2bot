@@ -23,6 +23,16 @@ class StartCommand extends Command {
     return bot.sendMessage(chatId, t18g(locale)`start`, {
       parse_mode: ParseMode.HTML,
       disable_web_page_preview: true,
+      reply_markup: {
+        inline_keyboard: [
+          [
+            {
+              text: t18g(locale)`start_search`,
+              switch_inline_query: '',
+            },
+          ],
+        ],
+      },
     })
   }
 }
