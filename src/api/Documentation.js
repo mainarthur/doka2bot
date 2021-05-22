@@ -6,8 +6,9 @@ class Documentation {
    * @param {String} options.link
    * @param {String} [options.searchLink]
    * @param {String} [options.icon]
+   * @param {String} [options.keywords]
    */
-  constructor({ name, description, link, searchLink, icon }) {
+  constructor({ name, description, link, searchLink, icon, keywords }) {
     if (!name) throw new Error('"name" field is required')
     if (!description) throw new Error('"description" field is required')
     if (!link) throw new Error('"link" field is required')
@@ -16,6 +17,7 @@ class Documentation {
     this.link = link
     this.searchLink = searchLink
     this.icon = icon
+    this.keywords = keywords
   }
 
   /**
@@ -31,7 +33,7 @@ class Documentation {
   }
 
   toString() {
-    return `${this.name} ${this.description} ${this.link}`
+    return `${this.name} ${this.description} ${this.link} ${this.keywords}`
   }
 }
 
