@@ -1,0 +1,16 @@
+[
+  {
+    "name": "css",
+    "icon": "https://telegra.ph/file/cd303ced1aa5d57313e04.png",
+    "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    "searchLink": "https://developer.mozilla.org/en-US/search?q="
+  },
+  {
+    "name": "html",
+    "icon": "https://telegra.ph/file/0dfa7b55174825ce13dd2.png",
+    "description": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    "searchLink": "https://developer.mozilla.org/en-US/search?q="
+  }
+]
