@@ -25,7 +25,7 @@ const inlineQueryExecuter = ({ query, locale }) => {
   if (nameMatch) {
     const { name, searchQuery } = nameMatch.groups
     const documentation = DocumentationRepository.documentations.find(
-      ({ name: docName }) => docName === name,
+      ({ name: docName }) => docName.toLowerCase() === name.toLowerCase(),
     )
     if (documentation) {
       return [
