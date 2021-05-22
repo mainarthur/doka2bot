@@ -24,7 +24,7 @@ class DocumentationArticleAdapter {
 ${description}`,
       parse_mode: ParseMode.HTML,
     }
-    this.thumb_url = icon
+    if (icon) this.thumb_url = icon
     this.reply_markup = {
       inline_keyboard: [
         [
