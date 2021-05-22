@@ -18,6 +18,7 @@ const includeCompare = (a, b) => a.includes(b)
 const getWordsOccurrencesCount = (str1, str2) => {
   const words1 = str1.split(' ')
   const words2 = str2.split(' ')
+
   return words2.reduce(
     (acc, word) => arrayCount(words1, word, includeCompare) + acc,
     0,
