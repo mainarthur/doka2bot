@@ -17,8 +17,8 @@ class DocumentationRepository {
    */
   static async load(documentationDirectory) {
     const files = await fsp.readdir(documentationDirectory)
-    const documentationFiles = files.filter((fileName) =>
-      fileName.endsWith(JSON_EXT),
+    const documentationFiles = files.filter(
+      (fileName) => fileName.endsWith(JSON_EXT) && !fileName.startsWith('.'),
     )
 
     for (const fileName of documentationFiles) {
