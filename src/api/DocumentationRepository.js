@@ -49,7 +49,7 @@ class DocumentationRepository {
 
   /**
    * @param {String} searchQuery
-   * @returns {Array<import('./Documentation')>}
+   * @returns {Array<Documentation>}
    */
   static search(searchQuery) {
     if (!searchQuery) return this._documentations
