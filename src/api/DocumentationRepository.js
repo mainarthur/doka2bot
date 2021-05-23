@@ -1,46 +1,28 @@
-const fsp = require('fs/promises')
-const path = require('path')
-
 const Documentation = require('./Documentation')
 
-const logger = require('../logger')
-const { JSON_EXT } = require('../constants')
 const getWordsOccurrencesCount = require('../util/getWordsOccurrencesCount')
+const JsonLoader = require('./JsonLoader')
 
 class DocumentationRepository {
   /**
    * @type {Documentation[]}
    */
   static _documentations = []
+  static _loader = new JsonLoader()
+
+  static onDataChange() {
+    this._documentations = Object.values(this._loader.data)
+      .map((jsons) => jsons.map((json) => new Documentation(json)))
+      .flat()
+  }
+
   /**
    *
-   * @param {string} documentationDirectory
+   * @param {String} documentationDirectory
    */
   static async load(documentationDirectory) {
-    const files = await fsp.readdir(documentationDirectory)
-    const documentationFiles = files.filter(
-      (fileName) => fileName.endsWith(JSON_EXT) && !fileName.startsWith('.'),
-    )
-
-    for (const fileName of documentationFiles) {
-      try {
-        const src = await fsp.readFile(
-          path.join(documentationDirectory, fileName),
-          'utf-8',
-        )
-
-        const json = JSON.parse(src)
-        if (Array.isArray(json)) {
-          json.forEach((doc) =>
-            this._documentations.push(new Documentation(doc)),
-          )
-        } else {
-          this._documentations.push(new Documentation(json))
-        }
-      } catch (err) {
-        logger.err(err)
-      }
-    }
+    this._loader.on('data-changed', this.onDataChange)
+    await this._loader.load(documentationDirectory)
   }
 
   static get documentations() {
