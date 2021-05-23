@@ -17,11 +17,11 @@ class SearchEngineRepository {
    */
   static async load(enginesDirectory) {
     const files = await fsp.readdir(enginesDirectory)
-    const documentationFiles = files.filter(
+    const searchEngineFiles = files.filter(
       (fileName) => fileName.endsWith(JSON_EXT) && !fileName.startsWith('.'),
     )
 
-    for (const fileName of documentationFiles) {
+    for (const fileName of searchEngineFiles) {
       try {
         const src = await fsp.readFile(
           path.join(enginesDirectory, fileName),
