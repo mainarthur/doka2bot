@@ -12,12 +12,19 @@ class Documentation {
     if (!name) throw new Error('"name" field is required')
     if (!description) throw new Error('"description" field is required')
     if (!link) throw new Error('"link" field is required')
+
+    if (typeof name !== 'string') throw new Error('"name" is not string')
+    if (typeof description !== 'string')
+      throw new Error('"description" is not string')
+    if (typeof link !== 'string') throw new Error('"link" is not string')
+
     this.name = name
     this.description = description
     this.link = link
-    this.searchLink = searchLink
-    this.icon = icon
-    this.keywords = keywords
+
+    if (typeof searchLink === 'string') this.searchLink = searchLink
+    if (typeof icon === 'string') this.icon = icon
+    if (typeof keywords === 'string') this.keywords = keywords
   }
 
   /**
