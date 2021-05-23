@@ -12,6 +12,7 @@ class DocumentationArticleAdapter {
    */
   constructor(documentation, locale, searchQuery) {
     if (!documentation) throw new Error('"documentation" field is required')
+    if (!locale) throw new Error('"locale" field is required')
     const { name, description, link, icon } = documentation
 
     this.id = crypto.randomUUID()
