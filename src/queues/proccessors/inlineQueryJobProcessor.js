@@ -21,9 +21,8 @@ const inlineQueryJobProcessor = async ({ data: inlineQuery }) => {
   const start = getNowSec()
 
   try {
-    console.log(offset, currentOffset)
     const results = inlineQueryExecuter({ query, locale })
-    console.log({ offset })
+
     const answered = await bot.answerInlineQuery(
       queryId,
       results.slice(
@@ -39,7 +38,7 @@ const inlineQueryJobProcessor = async ({ data: inlineQuery }) => {
 
     if (answered) {
       logger.log(
-        `[${new Date().toLocaleString()}][#id${userId}][inlineQuery] ${query} ${new Timedelta(
+        `[${new Date().toLocaleString()}][#id${userId}][inlineQuery][offset:${currentOffset}] ${query} ${new Timedelta(
           start,
           getNowSec(),
         )}`,
