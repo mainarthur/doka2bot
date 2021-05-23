@@ -8,9 +8,9 @@ You can contact me on Telegram: [@MasterArthur](https://t.me/MasterArthur) or fo
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/en/download/) (tested v16.0.0)
-2. npm (tested v7.12.1)
-3. Redis(tested v6.2.3)
+1.  [Node.js](https://nodejs.org/en/download/) (tested v16.0.0)
+2.  npm (tested v7.12.1)
+3.  Redis(tested v6.2.3)
 
 ## How to start
 
