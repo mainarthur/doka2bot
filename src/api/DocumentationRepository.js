@@ -1,7 +1,7 @@
 const Documentation = require('./Documentation')
+const JsonLoader = require('./JsonLoader')
 
 const getWordsOccurrencesCount = require('../util/getWordsOccurrencesCount')
-const JsonLoader = require('./JsonLoader')
 
 class DocumentationRepository {
   /**

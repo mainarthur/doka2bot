@@ -1,8 +1,10 @@
+const Command = require('./Command')
+
 const bot = require('../bots/bot')
-const { ParseMode, ChatAction } = require('../constants')
+
 const t18g = require('../locales')
 
-const Command = require('./Command')
+const { ParseMode, ChatAction } = require('../constants')
 
 class StartCommand extends Command {
   constructor() {

@@ -1,12 +1,14 @@
 const EventEmitter = require('events')
+
 const fs = require('fs')
-const fsp = fs.promises
 const path = require('path')
+
+const logger = require('../logger')
 
 const { JSON_EXT } = require('../constants')
 const { WATCHER_DELAY } = require('../../config.json')
-const logger = require('../logger')
 
+const fsp = fs.promises
 class JsonLoader extends EventEmitter {
   static DATA_CHANGED = 'data-changed'
 

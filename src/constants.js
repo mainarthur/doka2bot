@@ -9,6 +9,9 @@ const GIF_EXT = '.gif'
 const DECIMAL_RADIX = 10
 const MAX_INLINE_RESULTS = 50
 
+// Matches "{0}", "{1}" for formatting
+const INSERTION_REGEXP = /\{\d+\}/g
+
 /**
  * @type {Object.<string, import('node-telegram-bot-api').ChatAction>}
  */
@@ -37,4 +40,5 @@ module.exports = Object.freeze({
   ChatAction,
   ParseMode,
   DECIMAL_RADIX,
+  INSERTION_REGEXP,
 })

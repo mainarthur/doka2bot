@@ -1,7 +1,9 @@
 const crypto = require('crypto')
 const { HTML } = require('telegram-escape')
-const { ParseMode } = require('../constants')
+
 const t18g = require('../locales')
+
+const { ParseMode } = require('../constants')
 
 class DocumentationArticleAdapter {
   /**

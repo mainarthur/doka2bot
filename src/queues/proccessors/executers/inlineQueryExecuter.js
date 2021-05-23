@@ -1,7 +1,8 @@
-const DocumentationArticleAdapter = require('../../../api/DocumentationArticleAdapter')
 const DocumentationRepository = require('../../../api/DocumentationRepository')
-const SearchArticleAdapter = require('../../../api/SearchArticleAdapter')
 const SearchEngineRepository = require('../../../api/SearchEngineRepository')
+
+const DocumentationArticleAdapter = require('../../../api/DocumentationArticleAdapter')
+const SearchArticleAdapter = require('../../../api/SearchArticleAdapter')
 
 /*
 Matches

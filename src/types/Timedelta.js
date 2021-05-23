@@ -35,6 +35,10 @@ class Timedelta {
       seconds ? `${seconds}s` : ''
     }`.trim()
   }
+
+  static getTimestamp() {
+    return Math.floor(Date.now() / 1000)
+  }
 }
 
 module.exports = Timedelta

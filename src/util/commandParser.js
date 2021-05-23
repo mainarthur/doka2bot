@@ -1,6 +1,6 @@
 const UserCommand = require('../types/UserCommand')
+
 const { SPACE } = require('../constants')
-const { isString } = require('./type')
 
 /**
  *
@@ -27,7 +27,10 @@ const commandParser = (msg) => {
     const entity = entities[i]
 
     if (entity.offset === 0 && entity.type == 'bot_command') {
-      if (isString(text[entity.length]) && text[entity.length] !== SPACE) {
+      if (
+        typeof text[entity.length] === 'string' &&
+        text[entity.length] !== SPACE
+      ) {
         return null
       }
       return new UserCommand(

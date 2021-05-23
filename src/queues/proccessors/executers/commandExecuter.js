@@ -1,8 +1,9 @@
-const bot = require('../../../bots/bot')
-
 const Timedelta = require('../../../types/Timedelta')
 
+const bot = require('../../../bots/bot')
+
 const commandsRoutes = require('../../../commands')
+
 const logger = require('../../../logger')
 
 /**

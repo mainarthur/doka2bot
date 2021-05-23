@@ -1,5 +1,4 @@
 const JsonLoader = require('./JsonLoader')
-
 const SearchEngine = require('./SearchEngine')
 
 class SearchEngineRepository extends JsonLoader {

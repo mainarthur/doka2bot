@@ -1,5 +1,5 @@
-const logger = require('../logger')
 const botQueue = require('../queues/botQueue')
+const logger = require('../logger')
 
 const { RATE_LIMITER } = require('../../config.json')
 

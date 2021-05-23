@@ -1,6 +1,8 @@
-const commandParser = require('../../util/commandParser')
 const logger = require('../../logger')
+
+const commandParser = require('../../util/commandParser')
 const commandExecuter = require('./executers/commandExecuter')
+
 /**
  *  @param {import('bull').Job<import("node-telegram-bot-api").Message>}  job
  */

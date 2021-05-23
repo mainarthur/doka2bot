@@ -1,10 +1,13 @@
-const bot = require('../../bots/bot')
-const { MAX_INLINE_RESULTS } = require('../../constants')
-const logger = require('../../logger')
 const Timedelta = require('../../types/Timedelta')
+const bot = require('../../bots/bot')
+
+const logger = require('../../logger')
+
 const inlineQueryExecuter = require('./executers/inlineQueryExecuter')
 
-const getNowSec = () => Math.floor(Date.now() / 1000)
+const { MAX_INLINE_RESULTS } = require('../../constants')
+
+const { INLINE_QUERY_CACHE_TIME } = require('../../../config.json')
 
 /**
  *
@@ -18,7 +21,7 @@ const inlineQueryJobProcessor = async ({ data: inlineQuery }) => {
     offset,
   } = inlineQuery
   const currentOffset = +(offset || 0)
-  const start = getNowSec()
+  const start = Timedelta.getTimestamp()
 
   try {
     const results = inlineQueryExecuter({ query, locale })
@@ -30,7 +33,7 @@ const inlineQueryJobProcessor = async ({ data: inlineQuery }) => {
         MAX_INLINE_RESULTS * (currentOffset + 1),
       ),
       {
-        cache_time: 0,
+        cache_time: INLINE_QUERY_CACHE_TIME,
         is_personal: true,
         next_offset: `${currentOffset + 1}`,
       },
@@ -40,7 +43,7 @@ const inlineQueryJobProcessor = async ({ data: inlineQuery }) => {
       logger.log(
         `[${new Date().toLocaleString()}][#id${userId}][inlineQuery][offset:${currentOffset}] ${query} ${new Timedelta(
           start,
-          getNowSec(),
+          Timedelta.getTimestamp(),
         )}`,
       )
     }

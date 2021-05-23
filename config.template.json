@@ -16,5 +16,6 @@
       "max": 30
     }
   },
+  "INLINE_QUERY_CACHE_TIME": 0,
   "WATCHER_DELAY": 5000
 }

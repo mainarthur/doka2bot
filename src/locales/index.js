@@ -1,12 +1,11 @@
 const fs = require('fs')
 const path = require('path')
 
-const { JSON_EXT, DECIMAL_RADIX } = require('../constants')
-const { DEFAULT_LOCALE } = require('../../config.json')
 const logger = require('../logger')
 
-// Matches "{0}", "{1}" for formatting
-const insertionRegexp = /\{\d+\}/g
+const { JSON_EXT, DECIMAL_RADIX, INSERTION_REGEXP } = require('../constants')
+
+const { DEFAULT_LOCALE } = require('../../config.json')
 
 const locales = fs
   .readdirSync(__dirname)
@@ -40,7 +39,7 @@ function t18g(locale) {
 
     if (!text) return `{${key}}`
 
-    const insertionsMatch = text.match(insertionRegexp)
+    const insertionsMatch = text.match(INSERTION_REGEXP)
 
     if (!(insertionsMatch && substitutions.length)) return text
 
