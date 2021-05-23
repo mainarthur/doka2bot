@@ -1,7 +1,7 @@
 {
   "name": "doka2bot",
   "version": "1.0.0",
-  "description": "Telegram Bot that generates random pictures",
+  "description": "Documentation search bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
