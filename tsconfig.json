@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outFile": "./built/out,js",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["./node_modules/**/*"]
+}

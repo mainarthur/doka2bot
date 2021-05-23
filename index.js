@@ -14,6 +14,7 @@ void (async () => {
   )
   await SearchEngineRepository.load(path.join(__dirname, './src/search'))
   for (const updateType of ALLOWED_UPDATES) {
+    // @ts-ignore
     bot.on(updateType, updateHandler(updateType))
   }
 
