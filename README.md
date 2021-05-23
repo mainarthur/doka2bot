@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/590a37f2a664482da8998480f630d014)](https://app.codacy.com/gh/mainarthur/doka2bot?utm_source=github.com&utm_medium=referral&utm_content=mainarthur/doka2bot&utm_campaign=Badge_Grade_Settings) [![chatroom icon](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/doka2bot)
 
-[Telegram Bot](https://t.me/Doka2Bot) that sends random pictures!
+[Telegram Bot](https://t.me/Doka2Bot) documentation search bot!
 
 ## How to submit documentation
 
