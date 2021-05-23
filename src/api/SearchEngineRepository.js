@@ -14,13 +14,11 @@ class SearchEngineRepository extends JsonLoader {
    * @param {String} searchDirectory
    */
   static async load(searchDirectory) {
-    this._loader.on(
-      JsonLoader.DATA_CHANGED,
-      (data) =>
-        (this._engines = Object.values(data)
-          .map((jsons) => jsons.map((json) => new SearchEngine(json)))
-          .flat()),
-    )
+    this._loader.on(JsonLoader.DATA_CHANGED, (data) => {
+      this._engines = Object.values(data)
+        .map((jsons) => jsons.map((json) => new SearchEngine(json)))
+        .flat()
+    })
     await this._loader.load(searchDirectory)
   }
 
