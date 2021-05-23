@@ -4,6 +4,7 @@ const fsp = fs.promises
 const path = require('path')
 
 const { JSON_EXT } = require('../constants')
+const { WATCHER_DELAY } = require('../../config.json')
 const logger = require('../logger')
 
 class JsonLoader extends EventEmitter {
@@ -31,6 +32,7 @@ class JsonLoader extends EventEmitter {
     let timerId
 
     fs.watch(directory, (event, fileName) => {
+      logger.log('watcher', { event, fileName })
       if (!fileName.endsWith(JSON_EXT) || fileName.startsWith('.')) return
       clearTimeout(timerId)
       timerId = setTimeout(async () => {
@@ -49,8 +51,7 @@ class JsonLoader extends EventEmitter {
             this.emit('data-changhed')
           }
         }
-        console.log(this.data)
-      }, 5000)
+      }, WATCHER_DELAY)
     })
   }
 
