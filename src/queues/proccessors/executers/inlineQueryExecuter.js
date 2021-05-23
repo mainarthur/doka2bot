@@ -1,5 +1,7 @@
 const DocumentationArticleAdapter = require('../../../api/DocumentationArticleAdapter')
 const DocumentationRepository = require('../../../api/DocumentationRepository')
+const SearchArticleAdapter = require('../../../api/SearchArticleAdapter')
+const SearchEngineRepository = require('../../../api/SearchEngineRepository')
 
 /*
 Matches
@@ -31,6 +33,13 @@ const inlineQueryExecuter = ({ query, locale }) => {
       return [
         new DocumentationArticleAdapter(documentation, locale, searchQuery),
       ]
+    }
+
+    const searchEngine = SearchEngineRepository.engines.find(
+      ({ name: engineName }) => engineName.toLowerCase() === name.toLowerCase(),
+    )
+    if (searchEngine) {
+      return [new SearchArticleAdapter(searchEngine, locale, searchQuery)]
     }
   }
 

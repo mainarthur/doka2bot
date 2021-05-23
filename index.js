@@ -3,13 +3,16 @@ const bot = require('./src/bots/bot')
 const logger = require('./src/logger')
 const updateHandler = require('./src/bots/updateHandler')
 
-const { ALLOWED_UPDATES } = require('./config.json')
 const DocumentationRepository = require('./src/api/DocumentationRepository')
+const SearchEngineRepository = require('./src/api/SearchEngineRepository')
+
+const { ALLOWED_UPDATES } = require('./config.json')
 
 void (async () => {
   await DocumentationRepository.load(
     path.join(__dirname, './src/documentations'),
   )
+  await SearchEngineRepository.load(path.join(__dirname, './src/search'))
   for (const updateType of ALLOWED_UPDATES) {
     bot.on(updateType, updateHandler(updateType))
   }
