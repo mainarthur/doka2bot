@@ -9,18 +9,18 @@ class SearchEngineRepository extends JsonLoader {
   static _engines = []
   static _loader = new JsonLoader()
 
-  static onDataChange() {
-    this._engines = Object.values(this._loader.data)
-      .map((jsons) => jsons.map((json) => new SearchEngine(json)))
-      .flat()
-  }
-
   /**
    *
    * @param {String} searchDirectory
    */
   static async load(searchDirectory) {
-    this._loader.on('data-changed', this.onDataChange)
+    this._loader.on(
+      JsonLoader.DATA_CHANGED,
+      (data) =>
+        (this._engines = Object.values(data)
+          .map((jsons) => jsons.map((json) => new SearchEngine(json)))
+          .flat()),
+    )
     await this._loader.load(searchDirectory)
   }
 

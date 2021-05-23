@@ -8,7 +8,12 @@ const { WATCHER_DELAY } = require('../../config.json')
 const logger = require('../logger')
 
 class JsonLoader extends EventEmitter {
-  data = {}
+  static DATA_CHANGED = 'data-changed'
+
+  constructor() {
+    super()
+    this.data = {}
+  }
 
   /**
    *
@@ -48,7 +53,7 @@ class JsonLoader extends EventEmitter {
             await fsp.access(path.join(directory, fileName))
           } catch (err) {
             delete this.data[fileName]
-            this.emit('data-changhed')
+            this.emit(JsonLoader.DATA_CHANGED, this.data)
           }
         }
       }, WATCHER_DELAY)
@@ -70,7 +75,7 @@ class JsonLoader extends EventEmitter {
       this.data[fileName].push(json)
     }
 
-    this.emit('data-changhed')
+    this.emit(JsonLoader.DATA_CHANGED, this.data)
   }
 }
 

@@ -10,18 +10,18 @@ class DocumentationRepository {
   static _documentations = []
   static _loader = new JsonLoader()
 
-  static onDataChange() {
-    this._documentations = Object.values(this._loader.data)
-      .map((jsons) => jsons.map((json) => new Documentation(json)))
-      .flat()
-  }
-
   /**
    *
    * @param {String} documentationDirectory
    */
   static async load(documentationDirectory) {
-    this._loader.on('data-changed', this.onDataChange)
+    this._loader.on(
+      JsonLoader.DATA_CHANGED,
+      (data) =>
+        (this._documentations = Object.values(data)
+          .map((jsons) => jsons.map((json) => new Documentation(json)))
+          .flat()),
+    )
     await this._loader.load(documentationDirectory)
   }
 
