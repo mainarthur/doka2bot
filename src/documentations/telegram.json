@@ -20,5 +20,25 @@
     "description": "aiogram is a pretty simple and fully asynchronous framework for Telegram Bot API written in Python 3.7 with asyncio and aiohttp. It helps you to make your bots faster and simpler.",
     "link": "https://docs.aiogram.dev/en/latest/",
     "searchLink": "https://docs.aiogram.dev/en/latest/search.html?check_keywords=yes&area=default&q="
+  },
+  {
+    "name": "telegraf",
+    "description": "Modern Telegram Bot Framework for Node.js",
+    "link": "https://telegraf.js.org/index.html"
+  },
+  {
+    "name": "telegraf@4",
+    "description": "Modern Telegram Bot Framework for Node.js",
+    "link": "https://telegraf.js.org/index.html"
+  },
+  {
+    "name": "telegraf@3.38",
+    "description": "Modern Telegram Bot Framework for Node.js",
+    "link": "https://telegrafjs.org"
+  },
+  {
+    "name": "telegraf@3.39",
+    "description": "Modern Telegram Bot Framework for Node.js",
+    "link": "http://v3.telegrafjs.org"
   }
 ]
