@@ -6,7 +6,7 @@
 
 ## How to submit documentation
 
-You can contact me on Telegram: [@MasterArthur](https://t.me/MasterArthur) or fork and PR with new documentation.json file in documentations folder directory
+You can contact me on Telegram: [@MasterArthur](https://t.me/MasterArthur) or fork and PR with new documentation.json file in documentations folder
 
 ## Requirements
 
