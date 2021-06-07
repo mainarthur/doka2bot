@@ -1,3 +1,4 @@
+const PullCommand = require('./pull')
 const StartCommand = require('./start')
 
 /**
@@ -7,6 +8,7 @@ const StartCommand = require('./start')
  */
 const commandsRoutes = {
   start: new StartCommand(),
+  pull: new PullCommand(),
 }
 
 module.exports = commandsRoutes

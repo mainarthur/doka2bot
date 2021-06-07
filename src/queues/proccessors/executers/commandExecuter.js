@@ -6,6 +6,8 @@ const commandsRoutes = require('../../../commands')
 
 const logger = require('../../../logger')
 
+const { ADMIN_ID } = require('../../../../config.json')
+
 /**
  *
  * @param {import('../../../types/UserCommand')} command
@@ -23,6 +25,8 @@ const commandExecuter = async (command, message) => {
    * @type {import('../../../commands/Command')}
    */
   const commandHandler = commandsRoutes[commandName]
+
+  if (commandHandler.admin && userId !== ADMIN_ID) return
 
   if (commandHandler.action) {
     await bot.sendChatAction(chatId, commandHandler.action)
