@@ -21,6 +21,14 @@ class Command {
 
   /**
    * @abstract
+   * @returns {Boolean}
+   */
+  get admin() {
+    return false
+  }
+
+  /**
+   * @abstract
    *
    * @param {Payload} _payload
    *
