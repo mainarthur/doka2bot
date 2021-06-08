@@ -5,7 +5,7 @@
   "RATE_LIMITER": {
     "message": 1
   },
-  "ALLOWED_UPDATES": ["message"],
+  "ALLOWED_UPDATES": ["message", "inline_query"],
   "BULL_OPTIONS": {
     "defaultJobOptions": {
       "removeOnComplete": true,
